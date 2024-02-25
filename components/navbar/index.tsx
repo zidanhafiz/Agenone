@@ -120,13 +120,15 @@ const NavList = ({ type, showMenu }: NavListProps) => {
 
       {/* When is on Desktop this CTA button would be rendered */}
       {type === 'desktop' && (
-        <Button
-          type='a'
-          href='/contact'
-          size='md'
-        >
-          Contact Us
-        </Button>
+        <div className='navbar__cta--container'>
+          <Button
+            type='a'
+            href='/contact'
+            size='md'
+          >
+            Contact Us
+          </Button>
+        </div>
       )}
     </AnimatePresence>
   );
