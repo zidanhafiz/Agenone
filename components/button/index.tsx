@@ -13,13 +13,14 @@ type ButtonProps = {
   icon?: boolean;
   href?: string;
   variants?: Variants;
+  className?: string;
 };
 
 const Button = ({ children, type, size, href, icon, ...props }: ButtonProps) => {
   if (type === 'button') {
     return (
       <motion.button
-        className={clsx('button', size)}
+        className={clsx('button', size, props?.className)}
         {...props}
       >
         {children}
