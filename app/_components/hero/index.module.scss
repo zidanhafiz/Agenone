@@ -1,0 +1,115 @@
+@import '@/app/variables.scss';
+@import '@/app/mixins';
+
+.hero {
+  background: $gray-900 url('/ornament-1.png') center bottom/890px auto no-repeat;
+  min-height: 100vh;
+  color: white;
+
+  @include desktop() {
+    background-size: 100% auto;
+    background-position: center 8%;
+  }
+
+  .container {
+    @include container-mobile();
+    padding-top: 130px;
+    padding-bottom: 58px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop() {
+      padding-top: 194px;
+    }
+
+    .caption {
+      @include overline-sm();
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 8px 12px;
+      border-radius: 100px;
+      width: fit-content;
+
+      @include desktop() {
+        @include overline-md();
+        padding: 12px 16px;
+      }
+    }
+
+    h1 {
+      font-size: $text-5xl;
+      font-weight: 700;
+      line-height: $leading-5xl;
+      margin-top: 24px;
+      margin-bottom: 14px;
+
+      @include desktop() {
+        font-size: $display-lg;
+        line-height: $leading-display;
+        margin-bottom: 24px;
+      }
+
+      span {
+        color: transparent;
+        background: $primary-500;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    p {
+      font-size: $text-md;
+      font-weight: 500;
+      line-height: $leading-md;
+      color: $gray-200;
+      max-width: 693px;
+
+      @include desktop() {
+        font-size: $text-xl;
+      }
+    }
+
+    a {
+      margin: 40px auto 56px;
+
+      @include desktop() {
+        margin: 56px auto 80px;
+      }
+    }
+
+    .card__banner {
+      background: url('/card-banner-mobile.png') bottom center/100% 100% no-repeat;
+      width: 100%;
+      max-width: 1280px;
+      height: 347px;
+
+      @include desktop() {
+        background: url('/card-banner-desktop.png') bottom center/100% 100% no-repeat;
+        height: 334px;
+        padding: 24px;
+      }
+
+      .heading {
+        font-size: $text-lg;
+        font-weight: 600;
+        color: white;
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+
+        span {
+          display: block;
+        }
+
+        @include desktop() {
+          font-size: $text-4xl;
+
+          span {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}
