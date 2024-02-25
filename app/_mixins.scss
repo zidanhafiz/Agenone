@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+@mixin overline-md {
+  font-size: $text-sm;
+  font-weight: 500;
+  line-height: $leading-sm;
+  letter-spacing: 1px;
+}
+
+@mixin overline-sm {
+  font-size: $text-xs;
+  font-weight: 500;
+  line-height: $leading-sm;
+  letter-spacing: 1px;
+}
