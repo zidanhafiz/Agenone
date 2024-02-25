@@ -1,8 +1,12 @@
-@import '../../app/variables.scss';
-@import '../../app/mixins';
+@import '@/app/variables.scss';
+@import '@/app/mixins';
 
 .navbar {
-  background-color: black;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 
   .navbar__container {
     @include desktop() {
@@ -14,11 +18,13 @@
     justify-content: space-between;
     align-items: center;
 
-    .button {
+    .navbar__cta--container {
       display: none;
 
       @include desktop() {
+        width: 170px;
         display: flex;
+        justify-content: end;
       }
     }
 
@@ -51,9 +57,9 @@
         font-size: $text-md;
         font-weight: 500;
         position: absolute;
-        top: 5rem;
-        bottom: 0;
+        top: 4rem;
         left: 0;
+        min-height: 100vh;
         padding: 40px;
         width: 300px;
         box-shadow: $shadow-lg;
