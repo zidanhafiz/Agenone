@@ -1,7 +1,7 @@
 'use client';
 import { ReactNode } from 'react';
 import { clsx } from 'clsx';
-import { HTMLMotionProps, Variants, motion } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
 import Link from 'next/link';
 import './index.scss';
 import Image from 'next/image';
