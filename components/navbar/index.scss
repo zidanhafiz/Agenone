@@ -1,0 +1,90 @@
+@import '../../app/variables.scss';
+@import '../../app/mixins';
+
+.navbar {
+  background-color: black;
+
+  .navbar__container {
+    @include desktop() {
+      @include container-desktop();
+      padding: 16px;
+    }
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .button {
+      display: none;
+
+      @include desktop() {
+        display: flex;
+      }
+    }
+
+    .navbar__list {
+      &.desktop {
+        display: none;
+
+        @include desktop() {
+          display: flex;
+          color: white;
+          gap: 40px;
+          font-size: $text-lg;
+
+          li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+            gap: 5px;
+          }
+        }
+      }
+
+      &.mobile {
+        color: black;
+        display: flex;
+        gap: 3rem;
+        flex-direction: column;
+        background-color: white;
+        font-size: $text-md;
+        font-weight: 500;
+        position: absolute;
+        top: 5rem;
+        bottom: 0;
+        left: 0;
+        padding: 40px;
+        width: 300px;
+        box-shadow: $shadow-lg;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          width: fit-content;
+          gap: 4px;
+        }
+
+        .button {
+          display: flex;
+        }
+      }
+
+      a {
+        &:hover ~ .underline {
+          opacity: 1;
+        }
+      }
+
+      .underline {
+        background: $primary-400;
+        width: 60%;
+        height: 3px;
+        opacity: 0;
+        border-radius: 3px;
+        transition: 0.3s;
+      }
+    }
+  }
+}

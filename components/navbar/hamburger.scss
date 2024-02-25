@@ -1,0 +1,33 @@
+@import '../../app/mixins';
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.3s;
+
+  @include desktop() {
+    display: none;
+  }
+
+  .hamburger__line {
+    background-color: white;
+    width: 18px;
+    height: 3px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    background-color: white;
+
+    .hamburger__line {
+      background-color: black;
+    }
+  }
+}
