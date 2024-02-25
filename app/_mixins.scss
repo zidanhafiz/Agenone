@@ -13,3 +13,9 @@
   line-height: $leading-sm;
   letter-spacing: 1px;
 }
+
+@mixin desktop() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
